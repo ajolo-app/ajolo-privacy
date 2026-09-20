@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung • Ajolo</title>
+  <meta name="description" content="Offizielle Datenschutzerklärung, Impressum und rechtliche Dokumente für die mobile App Ajolo (iOS & Android).">
+  <meta name="robots" content="index, follow">
+  <style>
+:root {
+  --bg: #090a0f;
+  --bg-subtle: #12141c;
+  --surface: #181b26;
+  --surface-border: #262a3b;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent: #10b981;
+  --accent-glow: rgba(16, 185, 129, 0.15);
+  --tag-bg: rgba(255, 255, 255, 0.05);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;
+    --bg-subtle: #f1f5f9;
+    --surface: #ffffff;
+    --surface-border: #e2e8f0;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --accent: #059669;
+    --accent-glow: rgba(5, 150, 105, 0.12);
+    --tag-bg: rgba(0, 0, 0, 0.04);
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--surface-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+  color: var(--text-main);
+  background: var(--surface);
+}
+
+.lang-switch {
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.hero {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.meta-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--tag-bg);
+  border: 1px solid var(--surface-border);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.badge.highlight {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.section-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-card p {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.section-card p:last-child {
+  margin-bottom: 0;
+}
+
+.section-card ul {
+  margin: 12px 0 16px 20px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.section-card li {
+  margin-bottom: 8px;
+}
+
+.section-card strong {
+  color: var(--text-main);
+}
+
+footer {
+  border-top: 1px solid var(--surface-border);
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+</style>
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-de').forEach(el => el.style.display = lang === 'de' ? 'block' : 'none');
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+      document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+      localStorage.setItem('ajolo_legal_lang', lang);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('ajolo_legal_lang') || (navigator.language.startsWith('de') ? 'de' : 'en');
+      setLang(saved);
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">A</div>
+        <span>Ajolo Legal Hub</span>
+      </a>
+      <nav>
+        <a href="index.html" class="">Übersicht</a>
+        <a href="privacy.html" class="active">Datenschutz</a>
+        <a href="imprint.html" class="">Impressum</a>
+        <a href="terms.html" class="">AGB</a>
+      </nav>
+      <div class="lang-switch">
+        <button id="btn-de" class="lang-btn active" onclick="setLang('de')">DE</button>
+        <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1 class="lang-de">Datenschutzerklärung</h1>
+      <h1 class="lang-en" style="display:none;">Privacy Policy</h1>
+      <p class="lang-de">DSGVO, Health Connect, Apple Health & KI-Transparenz</p>
+      <p class="lang-en" style="display:none;">GDPR, Health Connect, Apple Health & AI Transparency</p>
+      
+      <div class="meta-badges">
+        <span class="badge highlight">✓ 100% DSGVO & GDPR Konform</span>
+        <span class="badge">🔒 Privacy by Design (Lokale Sandbox)</span>
+        <span class="badge">🍎 Apple Health & HealthKit Safe</span>
+        <span class="badge">🤖 Google Health Connect Validated</span>
+        <span class="badge">Stand: September 2026</span>
+      </div>
+    </div>
+
+    <div class="lang-de">
+      
+        <article class="section-card">
+          <h2>1. Verantwortliche Stelle & Kontakt (Art. 13 DSGVO)</h2>
+          <div><p>Verantwortlicher im Sinne von Art. 4 Nr. 7 der EU-Datenschutz-Grundverordnung (DSGVO) für die Verarbeitung personenbezogener Daten in der mobilen Applikation 'Ajolo' ist:</p>
+<p>Ajolo Fitness GmbH<br>Vertreten durch die Geschäftsführung: Max Mustermann (Geschäftsführer)<br>Musterstraße 123, 12345 Musterstadt, Deutschland</p>
+<p>E-Mail Allgemein: support@ajolo.app<br>Datenschutz-Kontakt: datenschutz@ajolo.app<br>Telefon: +49 (0) 123 4567890</p>
+<p>Bei Fragen zur Verarbeitung deiner personenbezogenen Daten, zur Ausübung deiner Betroffenenrechte oder zum Datenschutz kannst du dich jederzeit vertrauensvoll an uns wenden.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>2. Verarbeitete Datenarten & Geräteberechtigungen</h2>
+          <div><p>Ajolo benötigt für bestimmte Funktionen Zugriff auf Hardware-Schnittstellen deines Mobilgeräts. Diese Berechtigungen werden stets transparent und erst bei Aufruf der jeweiligen Funktion abgefragt:</p>
+<ul><li><strong>Kamera (android.permission.CAMERA / NSCameraUsageDescription):</strong> Dient ausschließlich dem Scannen von Lebensmittel-Barcodes, dem Fotografieren von Mahlzeiten für die optionale KI-Nährwertanalyse sowie der visuellen Übungs- und Fortschrittsdokumentation.</li><li><strong>Mikrofon (RECORD_AUDIO / NSMicrophoneUsageDescription):</strong> Dient der optionalen Sprachaufzeichnung für Notizen sowie der Spracheingabe von Mahlzeiten ('Speech-to-Text'). Audiodaten werden nach der Textumwandlung nicht dauerhaft gespeichert.</li><li><strong>Fotos & Speicher (READ_MEDIA_IMAGES / NSPhotoLibraryUsageDescription):</strong> Ermöglicht das Laden und private Speichern deiner Vorher-Nachher-Körperfortschrittsbilder lokal auf deinem Gerät.</li><li><strong>Bluetooth & Sensoren (BLUETOOTH_CONNECT / ACTIVITY_RECOGNITION / CoreBluetooth):</strong> Dient der optionalen Koppelung mit Bluetooth-Herzfrequenzgurten, Fitness-Trackern und der Schrittzählung während aktiver Trainingseinheiten.</li><li><strong>HealthKit & Health Connect:</strong> Synchronisation von Vital- und Trainingsdaten (siehe Ziffer 5).</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>3. Rechtsgrundlagen der Verarbeitung (Art. 6 & 9 DSGVO)</h2>
+          <div><p>Die Verarbeitung deiner Daten erfolgt im strengen Einklang mit den Vorgaben der DSGVO:</p>
+<ul><li><strong>Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung):</strong> Zur Bereitstellung der App-Kernfunktionen, Verwaltung von Profilen, Trainingsprotokollen, Übungen, Notizen und App-Einstellungen.</li><li><strong>Art. 9 Abs. 2 lit. a DSGVO (Ausdrückliche Einwilligung):</strong> Für besondere Kategorien personenbezogener Daten (Gesundheits- und Fitnessdaten wie Körpergewicht, Herzfrequenz, Trainingsintensität, Vitaldaten und konsumierte Nährwerte). Deine ausdrückliche Einwilligung wird im Onboarding gesondert eingeholt und kann in den App-Einstellungen jederzeit mit 1 Klick widerrufen werden.</li><li><strong>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung):</strong> Für die optionale Übermittlung von Fotos oder Audioaufnahmen an die KI-Schnittstelle zur Nährwerterkennung.</li><li><strong>Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse):</strong> Zur Gewährleistung von Stabilität, Integrität und Sicherheit der lokalen Sandbox und Schutz vor Manipulationen.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>4. Privacy by Design & Lokale Sandbox-Architektur</h2>
+          <div><p>Ajolo wurde von Grund auf nach dem Prinzip 'Privacy by Design & Default' (Art. 25 DSGVO) entwickelt:</p>
+<ul><li><strong>100% Lokale Datenspeicherung:</strong> Deine Trainingshistorie, Notizen, Gewichtsverläufe, Mahlzeiten und Routinen werden ausschließlich in den geschützten, isolierten Hive-Datenbanken innerhalb der privaten App-Sandbox deines Smartphones gespeichert.</li><li><strong>Kein Tracking & Keine Werbe-IDs:</strong> Wir verwenden keine Tracking-Cookies, keine Werbenetzwerke, keine Werbe-IDs (wie IDFA oder Google Werbe-ID) und betreiben kein verhaltensbasiertes Profiling.</li><li><strong>Lokale Verschlüsselung:</strong> Sensible Kontoinformationen werden über die nativen Sicherheitskomponenten deines Betriebssystems (iOS Keychain / Android EncryptedSharedPreferences / KeyStore) verschlüsselt hinterlegt.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>5. Apple Health & Google Health Connect (Richtlinienkonformität)</h2>
+          <div><p>Wenn du Ajolo optional mit Apple Health (HealthKit) oder Google Health Connect verbindest, gelten besonders strenge Schutzbestimmungen:</p>
+<ul><li><strong>Gelesene Datenarten:</strong> Ausschließlich Schrittanzahl, verbrannte Aktivitätskalorien, Gesamtkalorien, Distanz, Herzfrequenz und Körpergewicht.</li><li><strong>Strengste Zweckbindung:</strong> Die Daten dienen einzig und allein der lokalen Anzeige in deinen Ajolo-Dashboards und der Verrechnung deines Kalorientagesbudgets.</li><li><strong>KATEGORISCHES WEITERGABEVERBOT:</strong> Gesundheitsdaten aus Apple Health oder Health Connect werden unter keinen Umständen an Werbenetzwerke weitergegeben, zu Marketing- oder Werbezwecken genutzt, an Datenbroker verkauft oder für Data-Mining missbraucht.</li><li><strong>Volle Nutzerkontrolle:</strong> Berechtigungen können jederzeit in den Systemeinstellungen des Betriebssystems oder in den Ajolo-Einstellungen granular aktiviert oder deaktiviert werden.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>6. Künstliche Intelligenz (Google Gemini API) & Drittlandübermittlung</h2>
+          <div><p>Ajolo bietet modernste KI-Funktionen (Foto-Mahlzeitenerkennung, automatische Nährwertaufteilung und Spracheingabe) über die Google Gemini API (Google Ireland Limited / Google LLC, USA):</p>
+<ul><li><strong>Ausschließlich bei aktiver Nutzung:</strong> Daten werden nur dann übertragen, wenn du aktiv auf den Foto-Scan- oder Spracheingabe-Button tippst.</li><li><strong>Verschlüsselte Übertragung:</strong> Die Übermittlung von Bilddaten oder Text-/Sprachbefehlen erfolgt ausschließlich per Ende-zu-Ende Transportverschlüsselung (TLS 1.3).</li><li><strong>Keine Personenverknüpfung & Keine Speicherung:</strong> Die Daten werden pseudonymisiert verarbeitet, nicht mit deinem Nutzerprofil oder Namen verknüpft und unmittelbar nach Abschluss der Nährwertschätzung verworfen.</li><li><strong>Kein Training öffentlicher Modelle:</strong> Google verwendet deine über die API verarbeiteten Daten nicht zum Training von Foundation-Modellen.</li><li><strong>Drittlandübermittlung:</strong> Für die Datenübertragung in die USA besteht ein Angemessenheitsbeschluss der EU-Kommission (EU-U.S. Data Privacy Framework) bzw. Standardvertragsklauseln nach Art. 46 DSGVO.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>7. Barcode-Scanner & Externe Lebensmitteldatenbank (Open Food Facts)</h2>
+          <div><p>Beim Scannen von Produkt-Barcodes ruft die App Produktdaten aus der freien Datenbank Open Food Facts (Open Food Facts association, Frankreich) ab:</p>
+<ul><li>Übertragen wird ausschließlich die numerische EAN/Barcode-Nummer des Produkts.</li><li>Es werden keinerlei personenbezogene Daten, IP-Adressen zu Profilierungszwecken, Gerätekennungen oder Standorte an den Betreiber der Datenbank übertragen.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>8. Optionale Cloud-Sicherung (Apple iCloud & Google Drive)</h2>
+          <div><p>Ajolo bietet eine optionale Datensicherung über deinen persönlichen Cloud-Speicher (Apple iCloud bzw. Google Drive):</p>
+<ul><li><strong>Null Drittserver:</strong> Die Synchronisation erfolgt ausschließlich zwischen deinem Smartphone und deinem persönlichen Apple- oder Google-Konto. Es sind keine externen Datenbanken (wie Supabase oder Firebase) zwischengeschaltet.</li><li><strong>Kryptografische Versiegelung:</strong> Backup-Dateien werden vor dem Upload lokal kryptografisch versiegelt (HMAC-SHA256), um Manipulationen und Datenverfälschungen auszuschließen.</li><li>Die Aktivierung und Deaktivierung des Cloud-Syncs liegt vollständig in deiner Hand (unter 'Einstellungen -> Datensicherung').</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>9. Speicherdauer & Recht auf Vergessenwerden (Art. 17 DSGVO)</h2>
+          <div><p>Da deine Daten primär lokal auf deinem Endgerät gespeichert werden, bestimmst du die Speicherdauer vollständig selbst:</p>
+<ul><li><strong>Selektive Löschung:</strong> Du kannst einzelne Workouts, Sätze, Notizen, Mahlzeiten oder Messwerte jederzeit innerhalb der jeweiligen App-Ansicht löschen.</li><li><strong>1-Klick-Gesamtlöschung (Recht auf Vergessenwerden):</strong> Unter 'Einstellungen -> Konto & alle Daten unwiderruflich löschen' kannst du mit einer einzigen Aktion sämtliche lokalen Datenbanken, Boxen, Caches und gespeicherten Mediendateien rückstandslos und unwiderruflich vernichten.</li><li>Bei Deinstallation der App werden alle Sandbox-Dateien durch das Betriebssystem automatisch und vollständig entfernt.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>10. Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</h2>
+          <div><p>Gemäß Art. 20 DSGVO hast du das Recht, deine personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.</p>
+<p>In Ajolo stellen wir hierfür eine direkte 1-Klick-Exportfunktion bereit:</p><ul><li>Rufe 'Einstellungen -> Ressourcen & Rechtliches -> Daten exportieren (Art. 20 DSGVO)' auf.</li><li>Die App generiert in Sekundenschnelle ein vollständiges JSON-Archiv mit deinem Profil, deinen Workouts, Sätzen, Routinen, Notizen, Gewichtsverläufen und Streaks und übergibt es an das native Teilen-Menü deines Smartphones.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>11. Deine Betroffenenrechte (Art. 15–21 DSGVO)</h2>
+          <div><p>Als betroffene Person stehen dir gegenüber uns folgende gesetzliche Rechte nach der DSGVO zu:</p>
+<ul><li><strong>Art. 15 DSGVO (Auskunftsrecht):</strong> Du kannst Auskunft über deine von uns verarbeiteten Daten verlangen.</li><li><strong>Art. 16 DSGVO (Recht auf Berichtigung):</strong> Du kannst die Berichtigung unrichtiger Daten verlangen.</li><li><strong>Art. 17 DSGVO (Recht auf Löschung):</strong> Du kannst die unverzügliche Löschung deiner Daten verlangen ('Recht auf Vergessenwerden').</li><li><strong>Art. 18 DSGVO (Einschränkung der Verarbeitung):</strong> Du kannst die Einschränkung der Verarbeitung verlangen.</li><li><strong>Art. 20 DSGVO (Datenübertragbarkeit):</strong> Du kannst deine Daten im maschinenlesbaren JSON-Format exportieren.</li><li><strong>Art. 21 DSGVO (Widerspruchsrecht):</strong> Du kannst der Verarbeitung deiner Daten aus Gründen, die sich aus deiner besonderen Situation ergeben, jederzeit widersprechen.</li><li><strong>Widerruf von Einwilligungen:</strong> Eine einmal erteilte Einwilligung (z. B. in die Verarbeitung von Gesundheitsdaten oder KI-Foto-Scans) kannst du jederzeit mit Wirkung für die Zukunft in den Einstellungen widerrufen.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>12. Beschwerderecht bei der Aufsichtsbehörde (Art. 77 DSGVO)</h2>
+          <div><p>Du hast unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde, insbesondere in dem Mitgliedstaat deines gewöhnlichen Aufenthaltsorts, deines Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes, wenn du der Ansicht bist, dass die Verarbeitung der dich betreffenden personenbezogenen Daten gegen die DSGVO verstößt.</p>
+<p>Die für uns zuständige Landesdatenschutzbehörde richtet sich nach dem Sitz unseres Unternehmens (in Bayern: Bayerisches Landesamt für Datenschutzaufsicht, BayLDA).</p></div>
+        </article>
+        
+    </div>
+
+    <div class="lang-en" style="display:none;">
+      
+        <article class="section-card">
+          <h2>1. Data Controller & Contact (Art. 13 GDPR)</h2>
+          <div><p>The controller pursuant to Art. 4 No. 7 of the EU General Data Protection Regulation (GDPR) for data processing in the mobile application 'Ajolo' is:</p>
+<p>Ajolo Fitness GmbH<br>Represented by executive management: Max Mustermann (Geschäftsführer)<br>Musterstraße 123, 12345 Musterstadt, Deutschland</p>
+<p>General Email: support@ajolo.app<br>Privacy Contact: datenschutz@ajolo.app<br>Telephone: +49 (0) 123 4567890</p>
+<p>If you have any questions regarding the processing of your personal data or exercising your statutory rights as a data subject, feel free to contact us at any time.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>2. Categories of Data & Device Permissions</h2>
+          <div><p>Ajolo requires access to select hardware interfaces on your device for specific capabilities. These permissions are requested transparently and only when invoking the corresponding feature:</p>
+<ul><li><strong>Camera (NSCameraUsageDescription / CAMERA):</strong> Used exclusively to scan food barcodes, capture meal photos for optional AI nutritional analysis, and document physical training progress.</li><li><strong>Microphone (NSMicrophoneUsageDescription / RECORD_AUDIO):</strong> Enables optional voice notes and speech-to-text logging of meals. Audio streams are discarded immediately following text transcription.</li><li><strong>Photos & Storage (NSPhotoLibraryUsageDescription / READ_MEDIA_IMAGES):</strong> Allows importing and private local storage of personal progress photos.</li><li><strong>Bluetooth & Sensors (CoreBluetooth / BLUETOOTH_CONNECT / ACTIVITY_RECOGNITION):</strong> Used for optional pairing with external Bluetooth heart rate monitors, fitness accessories, and step counting during active sessions.</li><li><strong>HealthKit & Health Connect:</strong> Synchronization of vital and training metrics (see Section 5).</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>3. Legal Bases for Processing (Art. 6 & 9 GDPR)</h2>
+          <div><p>The processing of your personal data complies strictly with the requirements of the GDPR:</p>
+<ul><li><strong>Art. 6(1)(b) GDPR (Contractual Performance):</strong> Providing core application features, managing user profiles, workout logs, routines, notes, and local app preferences.</li><li><strong>Art. 9(2)(a) GDPR (Explicit Consent):</strong> Processing special categories of personal data (health and fitness metrics, including body weight, heart rate, training intensity, and consumed macronutrients). Your explicit consent is obtained separately during onboarding and can be revoked at any time with 1 tap in settings.</li><li><strong>Art. 6(1)(a) GDPR (Consent):</strong> Voluntary submission of image or voice data to the AI API for meal recognition.</li><li><strong>Art. 6(1)(f) GDPR (Legitimate Interest):</strong> Ensuring stability, operational integrity, and security of the local sandbox environment against unauthorized manipulation.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>4. Privacy by Design & Local Sandbox Architecture</h2>
+          <div><p>Ajolo is engineered from the ground up on the principle of Privacy by Design and by Default (Art. 25 GDPR):</p>
+<ul><li><strong>100% Local Storage:</strong> Your training history, notes, body metrics, meal records, and routines reside solely within isolated Hive databases inside your smartphone's private app sandbox.</li><li><strong>Zero Tracking & No Ad Identifiers:</strong> We employ no tracking cookies, advertising networks, or advertising identifiers (such as IDFA or Google Advertising ID) and conduct no behavioral profiling.</li><li><strong>Local Hardware-Backed Encryption:</strong> Sensitive credentials are encrypted via platform-native security APIs (iOS Keychain / Android EncryptedSharedPreferences / KeyStore).</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>5. Apple Health & Google Health Connect (Policy Adherence)</h2>
+          <div><p>When connecting Ajolo to Apple Health (HealthKit) or Google Health Connect, strict regulatory safeguards apply:</p>
+<ul><li><strong>Accessed Data Types:</strong> Restricted strictly to step counts, active burned calories, total calories, distance, heart rate, and body weight.</li><li><strong>Strict Purpose Limitation:</strong> Data is utilized solely for display within your Ajolo dashboards and calculating your daily net caloric balance.</li><li><strong>STRICT PROHIBITION ON THIRD-PARTY TRANSFERS:</strong> Health and fitness data from Apple Health or Health Connect is never shared with advertising networks, never used for marketing, never sold to data brokers, and never utilized for data-mining.</li><li><strong>Granular Control:</strong> Access permissions can be inspected, granted, or revoked at any time via device operating system settings or directly inside Ajolo.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>6. Artificial Intelligence (Google Gemini API) & Third-Country Transfer</h2>
+          <div><p>Ajolo offers advanced AI features (photo meal identification, automated nutrient itemization, and voice logging) via the Google Gemini API (Google Ireland Limited / Google LLC, USA):</p>
+<ul><li><strong>User-Initiated Only:</strong> Data is transmitted exclusively when you actively press the camera scan or speech logging button.</li><li><strong>End-to-End Transport Encryption:</strong> Image fragments and audio/text commands are transferred exclusively via TLS 1.3 encryption.</li><li><strong>No Identity Correlation & No Retention:</strong> Data is processed pseudonymously without attachment to your real name and is discarded immediately after inference completion.</li><li><strong>No Model Training:</strong> Google does not use data submitted through the API to train foundation models.</li><li><strong>International Transfer:</strong> Transfers to the United States are safeguarded under the European Commission's Adequacy Decision (EU-U.S. Data Privacy Framework) and EU Standard Contractual Clauses (Art. 46 GDPR).</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>7. Barcode Scanner & Open Food Database (Open Food Facts)</h2>
+          <div><p>When scanning product barcodes, the app queries nutritional records from the open collaborative database Open Food Facts (Open Food Facts association, France):</p>
+<ul><li>Only the numeric EAN/barcode sequence is transmitted.</li><li>No personal identifiers, IP addresses for tracking, or device fingerprints are provided to the database operator.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>8. Optional Cloud Synchronization (Apple iCloud & Google Drive)</h2>
+          <div><p>Ajolo offers optional encrypted backup synchronization through your personal cloud account (Apple iCloud or Google Drive):</p>
+<ul><li><strong>Zero Intermediary Servers:</strong> Synchronization takes place solely between your mobile device and your personal Apple or Google account. No third-party servers (such as Supabase or Firebase) process your data.</li><li><strong>Cryptographic Sealing:</strong> Backup archives are sealed locally using HMAC-SHA256 checksums before transmission to guarantee data integrity.</li><li>Activation and deactivation of cloud sync remain entirely at your discretion under 'Settings -> Backup'.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>9. Retention Period & Right to Erasure (Art. 17 GDPR)</h2>
+          <div><p>Because your data is stored locally on your device, retention is completely determined by you:</p>
+<ul><li><strong>Granular Deletion:</strong> You can delete individual exercises, workouts, notes, meals, or weight entries inside the respective screen at any time.</li><li><strong>1-Tap Permanent Erasure:</strong> Under 'Settings -> Delete Account & All Data', you can immediately and irreversibly purge all 15 local databases, caches, and media files.</li><li>Uninstalling the app causes the mobile operating system to purge all private sandbox files automatically.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>10. Right to Data Portability (Art. 20 GDPR)</h2>
+          <div><p>Pursuant to Art. 20 GDPR, you have the statutory right to receive all personal data stored concerning you in a structured, commonly used, and machine-readable format.</p>
+<p>In Ajolo, we provide an integrated 1-tap export function:</p><ul><li>Navigate to 'Settings -> Resources & Legal -> Export My Data (Art. 20 GDPR)'.</li><li>The app instantly creates a comprehensive JSON archive containing your profile, workouts, sets, routines, notes, weight tracking, and streaks, presenting it directly in the native share sheet.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>11. Your Statutory Data Subject Rights (Art. 15–21 GDPR)</h2>
+          <div><p>Under the GDPR, you hold full statutory rights concerning your personal data:</p>
+<ul><li><strong>Art. 15 GDPR:</strong> Right of access to your personal data.</li><li><strong>Art. 16 GDPR:</strong> Right to rectification of inaccurate records.</li><li><strong>Art. 17 GDPR:</strong> Right to erasure ('Right to be forgotten').</li><li><strong>Art. 18 GDPR:</strong> Right to restriction of processing.</li><li><strong>Art. 20 GDPR:</strong> Right to data portability.</li><li><strong>Art. 21 GDPR:</strong> Right to object to processing.</li><li><strong>Revocation of Consent:</strong> Any granted consent (e.g. for health data or AI photo analysis) can be revoked at any time with future effect in settings.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>12. Right to Lodge a Complaint with a Supervisory Authority (Art. 77 GDPR)</h2>
+          <div><p>Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a data protection supervisory authority, particularly in the Member State of your habitual residence, your place of work, or the location of the alleged infringement, if you consider that the processing of personal data relating to you infringes the GDPR.</p>
+<p>The competent supervisory authority for our registered office is the data protection authority of Bavaria, Germany (Bayerisches Landesamt für Datenschutzaufsicht, BayLDA).</p></div>
+        </article>
+        
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Ajolo App. Alle Rechte vorbehalten. • <a href="privacy.html">Datenschutz</a> • <a href="imprint.html">Impressum</a> • <a href="terms.html">AGB</a> • Support: <a href="mailto:support@ajolo.app">support@ajolo.app</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutzungsbedingungen & AGB • Ajolo</title>
+  <meta name="description" content="Offizielle Datenschutzerklärung, Impressum und rechtliche Dokumente für die mobile App Ajolo (iOS & Android).">
+  <meta name="robots" content="index, follow">
+  <style>
+:root {
+  --bg: #090a0f;
+  --bg-subtle: #12141c;
+  --surface: #181b26;
+  --surface-border: #262a3b;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent: #10b981;
+  --accent-glow: rgba(16, 185, 129, 0.15);
+  --tag-bg: rgba(255, 255, 255, 0.05);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;
+    --bg-subtle: #f1f5f9;
+    --surface: #ffffff;
+    --surface-border: #e2e8f0;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --accent: #059669;
+    --accent-glow: rgba(5, 150, 105, 0.12);
+    --tag-bg: rgba(0, 0, 0, 0.04);
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--surface-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+  color: var(--text-main);
+  background: var(--surface);
+}
+
+.lang-switch {
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.hero {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.meta-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--tag-bg);
+  border: 1px solid var(--surface-border);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.badge.highlight {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.section-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-card p {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.section-card p:last-child {
+  margin-bottom: 0;
+}
+
+.section-card ul {
+  margin: 12px 0 16px 20px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.section-card li {
+  margin-bottom: 8px;
+}
+
+.section-card strong {
+  color: var(--text-main);
+}
+
+footer {
+  border-top: 1px solid var(--surface-border);
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+</style>
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-de').forEach(el => el.style.display = lang === 'de' ? 'block' : 'none');
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+      document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+      localStorage.setItem('ajolo_legal_lang', lang);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('ajolo_legal_lang') || (navigator.language.startsWith('de') ? 'de' : 'en');
+      setLang(saved);
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">A</div>
+        <span>Ajolo Legal Hub</span>
+      </a>
+      <nav>
+        <a href="index.html" class="">Übersicht</a>
+        <a href="privacy.html" class="">Datenschutz</a>
+        <a href="imprint.html" class="">Impressum</a>
+        <a href="terms.html" class="active">AGB</a>
+      </nav>
+      <div class="lang-switch">
+        <button id="btn-de" class="lang-btn active" onclick="setLang('de')">DE</button>
+        <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1 class="lang-de">Nutzungsbedingungen & AGB</h1>
+      <h1 class="lang-en" style="display:none;">Terms of Service & AGB</h1>
+      <p class="lang-de">Haftungsausschluss, KI-Transparenz, LMIV & Abos</p>
+      <p class="lang-en" style="display:none;">Disclaimers, AI Transparency, LMIV & Subscriptions</p>
+      
+      <div class="meta-badges">
+        <span class="badge highlight">✓ 100% DSGVO & GDPR Konform</span>
+        <span class="badge">🔒 Privacy by Design (Lokale Sandbox)</span>
+        <span class="badge">🍎 Apple Health & HealthKit Safe</span>
+        <span class="badge">🤖 Google Health Connect Validated</span>
+        <span class="badge">Stand: September 2026</span>
+      </div>
+    </div>
+
+    <div class="lang-de">
+      
+        <article class="section-card">
+          <h2>§ 1 Geltungsbereich, Vertragspartner & Mindestalter</h2>
+          <div><p>1. Geltung: Diese Allgemeinen Geschäftsbedingungen (AGB) regeln das Vertragsverhältnis zwischen Ajolo Fitness GmbH, vertreten durch Max Mustermann (Geschäftsführer), Musterstraße 123, 12345 Musterstadt, Deutschland (nachfolgend 'Anbieter' oder 'wir') und den Nutzern der mobilen Applikation 'Ajolo' (nachfolgend 'Nutzer' oder 'du').</p>
+<p>2. Zustimmung: Mit dem Herunterladen, der Installation, der Registrierung oder der aktiven Nutzung von Ajolo stimmst du der Geltung dieser AGB ausdrücklich zu.</p>
+<p>3. Mindestalter & Jugendschutz:</p><ul><li><strong>Eigenständige Nutzung ab 16 Jahren:</strong> Personen, die das 16. Lebensjahr vollendet haben, dürfen Ajolo eigenständig nutzen.</li><li><strong>Jugendliche zwischen 14 und 15 Jahren:</strong> Die Nutzung ist gestattet, sofern die Erziehungsberechtigten (Eltern) der Nutzung und diesen AGB ausdrücklich zugestimmt haben.</li><li><strong>Kinder unter 14 Jahren:</strong> Personen unter 14 Jahren ist die eigenständige Nutzung der App nicht gestattet.</li><li><strong>Kostenpflichtige Abonnements (Ajolo PRO):</strong> Der Abschluss von kostenpflichtigen Abonnements oder In-App-Käufen darf ausschließlich durch volljährige Personen (ab 18 Jahren) oder mit ausdrücklicher Genehmigung der Erziehungsberechtigten über das jeweilige Store-Konto (z. B. Apple-ID / Google-Konto) erfolgen.</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 2 Leistungsgegenstand & Ausschluss als Medizinprodukt (MDR / HWG)</h2>
+          <div><p>1. Zweckbestimmung: Ajolo ist eine Software zur persönlichen Selbstoptimierung, Protokollierung von Fitness- und Krafttrainingsaktivitäten, Notizverwaltung und allgemeinen Orientierung bei Ernährungsgewohnheiten (Lifestyle & Wellness Application).</p>
+<p>2. KEIN MEDIZINPRODUKT: Ajolo ist ausdrücklich KEIN Medizinprodukt im Sinne der Verordnung (EU) 2017/745 über Medizinprodukte (MDR) und keine digitale Gesundheitsanwendung (DiGA). Die App ist nicht für die Diagnose, Heilung, Linderung, Überwachung, Behandlung oder Vorbeugung von Krankheiten, Verletzungen, Behinderungen oder pathologischen Zuständen bestimmt.</p>
+<p>3. Keine ärztliche Beratung: Sämtliche in der App bereitgestellten Informationen, Algorithmen, KI-Vorschläge, Kalorienrichtwerte oder Trainingspläne stellen weder eine medizinische, physiotherapeutische noch ernährungswissenschaftliche Beratung oder Heilbehandlung dar und können den individuellen Rat eines qualifizierten Facharztes keinesfalls ersetzen.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 3 Gesundheitshinweis & Sporttauglichkeit (PAR-Q / Training)</h2>
+          <div><p>1. Ärztliche Vorabkonsultation: Vor Beginn eines neuen Trainingsprogramms, einer Intensivierung bestehender Workouts oder einer restriktiven Ernährungsumstellung wird dringend empfohlen, sich einer sportärztlichen Untersuchung zu unterziehen. Dies gilt insbesondere bei Vorerkrankungen des Herz-Kreislauf-Systems, der Atemwege, des Bewegungsapparates (Bandscheiben, Gelenke, Sehnen), Bluthochdruck, Diabetes, Stoffwechselerkrankungen, Adipositas oder während einer Schwangerschaft.</p>
+<p>2. Eigenverantwortung bei Belastung: Der Nutzer wählt Trainingsgewichte, Wiederholungszahlen, Trainingsfrequenz und Übungsvarianten in voller Eigenverantwortung. Trainingspläne und Vorschläge in Ajolo sind unverbindliche Hilfestellungen. Bei Anzeichen von Unwohlsein, stechenden Schmerzen, Schwindel, Atemnot oder Herzrasen ist das Training unverzüglich abzubrechen und gegebenenfalls medizinische Hilfe in Anspruch zu nehmen.</p>
+<p>3. Technische Einschränkungen: Ajolo verfügt über keine Echtzeit-Sensorik zur Beurteilung der biomechanischen Bewegungsausführung oder individuellen Belastungsgrenzen des Nutzers. Der Nutzer ist für die korrekte, sichere Ausführung aller Übungen selbst verantwortlich.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 4 Lebensmittel-, Allergen- & Nährwert-Disclaimer (LMIV)</h2>
+          <div><p>1. Lebensmittelinformationsverordnung (LMIV): Nährwert-, Kalorien-, Inhaltsstoff- und Portionsangaben in Ajolo stammen aus öffentlich zugänglichen Datenbanken (z. B. Open Food Facts), probabilistischer Bilderkennung (Künstliche Intelligenz) oder Nutzereingaben. Sie dienen ausschließlich der unverbindlichen Orientierung.</p>
+<p>2. KEINE ALLERGENGARANTIE: Ajolo ist ausdrücklich KEIN Allergen-Früherkennungs- oder Warnsystem. Wir übernehmen keinerlei Gewähr oder Garantie für die Abwesenheit potenziell allergieauslösender Stoffe oder Spuren (z. B. Erdnüsse, Schalenfrüchte, Gluten, Milchbestandteile/Laktose, Soja, Ei, Sellerie, Senf, Sesamsamen, Lupinen, Weichtiere, Fisch, Krebstiere, Sulfite).</p>
+<p>3. Warnung bei Unverträglichkeiten & Diabetes: Personen mit lebensbedrohlichen Allergien (Gefahr eines anaphylaktischen Schocks), Zöliakie, chronischen Nahrungsmittelunverträglichkeiten oder stoffwechselbedingten Erkrankungen (z. B. Diabetes mellitus zur Berechnung von Insulindosen) dürfen sich unter keinen Umständen auf die Nährwert-, Kohlenhydrat- oder Allergenangaben der App verlassen. Maßgeblich ist ausschließlich das physische Etikett und die Herstellerkennzeichnung auf der Originalverpackung des Lebensmittels.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 5 KI-Funktionen, Schätzwerte & EU AI Act (VO (EU) 2024/1689)</h2>
+          <div><p>1. Transparenzpflicht (Art. 50 AI Act): Ajolo setzt modernste Künstliche Intelligenz (Google Gemini API) für optionale Funktionen ein (z. B. KI-Foto-Mahlzeitenerkennung, automatische Nährwertaufteilung, Spracheingabe und KI-Trainingsassistenz). Bei Nutzung dieser Features interagiert der Nutzer mit einem KI-System.</p>
+<p>2. Probabilistische Schätzungen: KI-Modelle arbeiten mit statistischen Wahrscheinlichkeiten und können fehlerhafte Ergebnisse, Verzerrungen oder falsche Interpretationen ('Halluzinationen') generieren. Faktoren wie Lichteinfall, Zubereitungsart, verdeckte Fette, Soßen und Schichtungen eines Gerichts können die Nährwertschätzung signifikant beeinflussen.</p>
+<p>3. Überprüfungspflicht des Nutzers: Der Nutzer ist verpflichtet, alle von der KI erkannten Lebensmittel, Portionsgewichte und Nährwerte vor dem Speichern auf Plausibilität zu prüfen und bei Bedarf manuell zu korrigieren. Eine Haftung für fehlerhafte KI-Erkennungen ist nach Maßgabe von § 9 dieser AGB beschränkt.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 6 In-App-Abonnements (Ajolo PRO), Preise & Kontingente</h2>
+          <div><p>1. Leistungsumfang: Neben dem kostenfreien Basisumfang bietet Ajolo ein kostenpflichtiges Premium-Abonnement ('Ajolo PRO') mit erweiterten Funktionen (u. a. KI-Mahlzeiten-Scan, Live-Herzfrequenz, Pro-Designs).</p>
+<p>2. Vertragsschluss über App-Stores: Der Erwerb von Abonnements oder Einmalkäufen erfolgt ausschließlich über die In-App-Kaufsysteme der jeweiligen Plattformbetreiber (Apple Inc. / App Store bzw. Google LLC / Google Play Store). Die Vertragsabwicklung, Abrechnung, Verlängerung und Zahlungsmodalitäten unterliegen den jeweiligen Store-Nutzungsbedingungen.</p>
+<p>3. Fair-Use-Kontingent für KI: Um Serverüberlastungen und Missbrauch zu verhindern, umfasst das PRO-Abonnement ein faires Nutzungskontingent von täglich 10 KI-Foto-Scans und 10 KI-Sprachprotokollierungen. Der Kontingentzähler setzt sich täglich um 00:00 Uhr Ortszeit zurück. Nicht genutzte Scans verfallen und können weder angespart noch monetär ausgezahlt werden.</p>
+<p>4. Automatische Verlängerung: Das Abonnement verlängert sich automatisch um die gewählte Laufzeit (z. B. 1 Monat oder 1 Jahr), sofern es nicht spätestens 24 Stunden vor dem Ende des aktuellen Abrechnungszeitraums gekündigt wird.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 7 Gesetzliche Widerrufsbelehrung & Muster-Widerrufsformular</h2>
+          <div><ul><li>WIDERRUFSBELEHRUNG ---</li></ul>
+<p>Widerrufsrecht:<br>Als Verbraucher hast du das Recht, binnen 14 Tagen ohne Angabe von Gründen den Vertrag zu widerrufen.</p>
+<p>Widerruf bei In-App-Käufen (Apple & Google):<br>Da In-App-Käufe und Abonnements direkt mit Apple Inc. bzw. Google LLC abgeschlossen werden, ist der Widerruf nach den Richtlinien des jeweiligen Stores geltend zu machen:</p><ul><li><strong>Apple App Store:</strong> Rufe die Webseite https://reportaproblem.apple.com auf, melde dich mit deiner Apple-ID an und beantworte das Erstattungsgesuch.</li><li><strong>Google Play Store:</strong> Rufe die Seite https://play.google.com auf oder nutze den Google Play Support innerhalb der gesetzlichen Fristen.</li></ul>
+<p>Vorzeitiges Erlöschen des Widerrufsrechts bei digitalen Inhalten (§ 356 Abs. 5 BGB):<br>Das Widerrufsrecht erlischt bei einem Vertrag über die Bereitstellung von nicht auf einem körperlichen Datenträger befindlichen digitalen Inhalten, wenn der Unternehmer mit der Ausführung des Vertrags begonnen hat, nachdem der Verbraucher ausdrücklich zugestimmt hat, dass der Unternehmer mit der Ausführung des Vertrags vor Ablauf der Widerrufsfrist beginnt, und seine Kenntnis davon bestätigt hat, dass er durch seine Zustimmung mit Beginn der Ausführung sein Widerrufsrecht verliert.</p>
+<p>(Wenn du den Vertrag widerrufen willst, fülle bitte dieses Formular aus und sende es zurück):</p><ul><li>GESETZLICHES MUSTER-WIDERRUFSFORMULAR ---</li></ul>
+<p>An: Ajolo Fitness GmbH, Musterstraße 123, 12345 Musterstadt, Deutschland, E-Mail: support@ajolo.app</p>
+<p>Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*):<br>(*) Unzutreffendes streichen.</p><ul><li><strong>Bestellt am (*)/erhalten am (*):</strong> </li><li><strong>Name des/der Verbraucher(s):</strong> </li><li><strong>Anschrift des/der Verbraucher(s):</strong> </li><li><strong>Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier):</strong> </li><li><strong>Datum:</strong> </li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 8 Kündigung von Abonnements (§ 312k BGB)</h2>
+          <div><p>1. Jederzeitige Kündbarkeit: Du kannst ein laufendes Ajolo PRO-Abonnement jederzeit mit Wirkung zum Ende des aktuellen Abrechnungszeitraums kündigen. Nach der Kündigung bleiben alle PRO-Funktionen bis zum Ende des bereits bezahlten Zeitraums voll nutzbar.</p>
+<p>2. Kündigungsweg gemäß § 312k BGB & Store-Richtlinien:<br>Da das Abonnement über deinen Apple- oder Google-Account verwaltet wird, erfolgt die Kündigung direkt über die Systemeinstellungen deines Smartphones:</p><ul><li><strong>Apple iOS:</strong> Einstellungen -> [Dein Name/Apple-ID] -> Abonnements -> Ajolo -> Abonnement kündigen (oder direkt unter {{APPLE_SUBSCRIPTIONS_URL}})</li><li><strong>Google Android:</strong> Google Play Store -> Profil-Icon oben rechts -> Zahlungen & Abos -> Abos -> Ajolo -> Abo kündigen (oder direkt unter {{GOOGLE_PLAY_SUBSCRIPTIONS_URL}})</li></ul>
+<p>3. In-App-Kündigungslink: In den Einstellungen von Ajolo unter 'Ressourcen & Rechtliches' stellen wir dir einen direkten 1-Klick-Kündigungsbutton zur Verfügung, der dich unmittelbar in die Abonnementverwaltung deines Stores weiterleitet.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 9 Rechtswirksame Haftungsbeschränkung (§ 309 Nr. 7 BGB & GmbHG)</h2>
+          <div><p>1. Unbeschränkte Haftung: Der Anbieter haftet nach den gesetzlichen Bestimmungen uneingeschränkt:<br>a) für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, die auf einer vorsätzlichen oder fahrlässigen Pflichtverletzung des Anbieters, seiner gesetzlichen Vertreter oder Erfüllungsgehilfen beruhen;<br>b) für Schäden, die auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung des Anbieters, seiner gesetzlichen Vertreter oder Erfüllungsgehilfen beruhen;<br>c) bei arglistig verschwiegenen Mängeln, der Übernahme einer Beschaffenheitsgarantie sowie bei Ansprüchen nach dem Produkthaftungsgesetz (ProdHaftG).</p>
+<p>2. Begrenzte Haftung bei Kardinalpflichten: Bei der leicht fahrlässigen Verletzung wesentlicher Vertragspflichten (Kardinalpflichten, deren Erfüllung die ordnungsgemäße Durchführung des Vertrages überhaupt erst ermöglicht und auf deren Einhaltung der Vertragspartner regelmäßig vertrauen darf) ist die Haftung des Anbieters der Höhe nach begrenzt auf den vertragstypischen, bei Vertragsschluss vorhersehbaren Schaden. Diese Haftungssumme ist im Höchstmaß beschränkt auf den Gesamtbetrag der vom Nutzer im betreffenden Kalenderjahr an den Anbieter entrichteten Entgelte (bzw. auf maximal 50,00 EUR bei unentgeltlicher Nutzung).</p>
+<p>3. Ausschluss im Übrigen: Eine weitergehende Haftung des Anbieters für leichte Fahrlässigkeit ist ausgeschlossen.</p>
+<p>4. Haftung für Datenverlust: Bei Verlust von Daten haftet der Anbieter nur für denjenigen Aufwand, der bei ordnungsgemäßer, regelmäßiger Datensicherung (z. B. über die lokale Datensicherung oder Cloud-Backup-Funktion) durch den Nutzer zur Wiederherstellung der Daten erforderlich gewesen wäre.</p>
+<p>5. Haftung der GmbH: Der Anbieter tritt als juristische Person mit beschränkter Haftung (GmbH) auf. Die Haftung für Verbindlichkeiten der Gesellschaft ist gemäß § 13 Abs. 2 GmbHG auf das Gesellschaftsvermögen beschränkt.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 10 Urheberrecht & Verbot von Reverse Engineering</h2>
+          <div><p>1. Schutzrechte: Alle Inhalte, Designs, Logos, Grafiken, Datenbankstrukturen, Algorithmen und Quellcodes von Ajolo sind urheberrechtlich und leistungsschutzrechtlich geschützt. Dem Nutzer wird lediglich ein einfaches, nicht übertragbares, nicht unterlizenzierbares Recht zur bestimmungsgemäßen privaten Nutzung der App eingeräumt.</p>
+<p>2. Verbotene Handlungen: Dem Nutzer ist es strikt untersagt, die Software ganz oder teilweise zu dekompilieren, zu disassemblieren, per Reverse Engineering zu analysieren, abgeleitete Werke zu erstellen, automatisiert auszulesen (Scraping) oder unberechtigte Zugriffe auf Server-APIs durchzuführen.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 11 Streitbeilegung, Gerichtsstand & Schlussbestimmungen</h2>
+          <div><p>1. Anwendbares Recht: Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG). Bei Verbrauchern mit gewöhnlichem Aufenthalt in einem anderen Mitgliedstaat der EU bleiben die zwingenden verbraucherschützenden Vorschriften dieses Staates unberührt.</p>
+<p>2. Verbraucherstreitbeilegung (§ 36 VSBG): Der Anbieter ist weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+<p>3. Online-Streitbeilegung (Art. 14 Abs. 1 ODR-VO): Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, abrufbar unter: https://ec.europa.eu/consumers/odr. Unsere Kontakt-E-Mail lautet: support@ajolo.app.</p>
+<p>4. Salvatorische Klausel (§ 306 BGB): Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam oder undurchführbar sein oder werden, so berührt dies die Gültigkeit der übrigen Bestimmungen nicht. Anstelle der unwirksamen Bestimmung treten die gesetzlichen Vorschriften.</p></div>
+        </article>
+        
+    </div>
+
+    <div class="lang-en" style="display:none;">
+      
+        <article class="section-card">
+          <h2>§ 1 Scope, Contracting Parties & Minimum Age</h2>
+          <div><p>1. Scope: These General Terms and Conditions (AGB) govern the contractual relationship between Ajolo Fitness GmbH, represented by Max Mustermann (Geschäftsführer), Musterstraße 123, 12345 Musterstadt, Deutschland (hereinafter 'Provider' or 'we') and the users of the mobile application 'Ajolo' (hereinafter 'User' or 'you').</p>
+<p>2. Agreement: By downloading, installing, registering, or actively using Ajolo, you expressly agree to these Terms of Service.</p>
+<p>3. Minimum Age & Protection of Minors:</p><ul><li><strong>Independent Use from Age 16:</strong> Individuals who have completed their 16th year of life may use Ajolo independently.</li><li><strong>Minors Aged 14 to 15:</strong> Use is permitted provided that their legal guardians (parents) have expressly consented to the use and these Terms.</li><li><strong>Children Under 14:</strong> Use of the app is not permitted for children under the age of 14.</li><li><strong>Paid Subscriptions (Ajolo PRO):</strong> The purchase of paid subscriptions or in-app purchases must be executed exclusively by persons of full legal age (18+) or with explicit authorization of legal guardians through the respective store account (e.g. Apple ID / Google account).</li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 2 Subject Matter & Exclusion as a Medical Device (MDR / HWG)</h2>
+          <div><p>1. Intended Purpose: Ajolo is software for personal self-optimization, logging fitness and strength training activities, note management, and general nutritional orientation (lifestyle and wellness application).</p>
+<p>2. NOT A MEDICAL DEVICE: Ajolo is expressly NOT a medical device within the meaning of Regulation (EU) 2017/745 on medical devices (MDR) and is not a digital health application (DiGA). The app is not intended for the diagnosis, cure, alleviation, monitoring, treatment, or prevention of diseases, injuries, disabilities, or pathological conditions.</p>
+<p>3. No Medical Advice: All information, algorithms, AI recommendations, caloric targets, or training routines provided within the app constitute neither medical, physiotherapeutic, nor nutritional counseling, and cannot replace the individual advice of a licensed healthcare physician.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 3 Health Notice & Physical Readiness (PAR-Q / Training)</h2>
+          <div><p>1. Prior Medical Consultation: Prior to starting a new training program, increasing workout intensity, or adopting a restrictive dietary regimen, it is strongly recommended to undergo a sports medical examination. This applies especially in cases of pre-existing cardiovascular conditions, respiratory diseases, musculoskeletal issues (spine, joints, tendons), hypertension, diabetes, metabolic disorders, obesity, or during pregnancy.</p>
+<p>2. Personal Responsibility for Physical Strain: The user selects training weights, repetitions, training frequency, and exercise variations under their own exclusive responsibility. Routine suggestions and workout plans in Ajolo are non-binding guidelines. At any sign of discomfort, acute pain, dizziness, shortness of breath, or palpitations, the exercise must be stopped immediately and medical attention sought if necessary.</p>
+<p>3. Technical Limitations: Ajolo does not possess real-time biomechanical sensor feedback to judge movement execution or personal biological strain thresholds. The user remains solely responsible for the safe and correct execution of all physical movements.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 4 Food, Allergen & Nutritional Disclaimer (LMIV)</h2>
+          <div><p>1. Food Information Regulation (LMIV): Nutritional, caloric, ingredient, and portion data in Ajolo originate from public databases (e.g., Open Food Facts), probabilistic image recognition (Artificial Intelligence), or user submissions. They serve solely as non-binding estimates.</p>
+<p>2. NO ALLERGEN GUARANTEE: Ajolo is expressly NOT an allergen detection or warning system. We assume no warranty or guarantee regarding the absence of potentially allergic substances or trace allergens (e.g., peanuts, tree nuts, gluten, dairy/lactose, soy, egg, celery, mustard, sesame, lupin, mollusks, fish, crustaceans, sulfites).</p>
+<p>3. Warning for Intolerances & Diabetes: Persons with life-threatening allergies (anaphylaxis risk), celiac disease, chronic food intolerances, or metabolic disorders (e.g., diabetes mellitus for calculating insulin units) must never rely on nutritional or carbohydrate values displayed in the app. The physical manufacturer label on the product packaging remains exclusively authoritative.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 5 AI Features, Estimations & EU AI Act (Reg. (EU) 2024/1689)</h2>
+          <div><p>1. Transparency Obligation (Art. 50 AI Act): Ajolo employs state-of-the-art Artificial Intelligence (Google Gemini API) for optional capabilities (such as AI meal photo recognition, automated nutrient breakdown, voice logging, and workout assistance). By using these features, you interact directly with an AI system.</p>
+<p>2. Probabilistic Inferences: AI models operate on mathematical probabilities and can produce incorrect results, bias, or erroneous classifications ('hallucinations'). Real-world parameters such as lighting, cooking methods, concealed fats, sauces, and layered food items can substantially affect nutrient approximations.</p>
+<p>3. User Duty of Verification: The user is required to verify all AI-recognized foods, portion weights, and macro values before saving and to adjust them manually where appropriate. Liability for inaccurate AI estimations is governed and limited strictly by § 9 of these Terms.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 6 In-App Subscriptions (Ajolo PRO), Pricing & Fair-Use Quota</h2>
+          <div><p>1. Scope of Service: Alongside the free basic feature set, Ajolo provides a paid premium subscription ('Ajolo PRO') offering enhanced capabilities (including AI food scanning, live heart-rate monitoring, and exclusive visual presets).</p>
+<p>2. Contract Formation via App Stores: Purchases of subscriptions or one-time items are processed exclusively through the in-app purchase infrastructure of the respective platform operators (Apple Inc. / App Store or Google LLC / Google Play Store). Contracting, billing, renewals, and payment options are subject to the terms of the respective store.</p>
+<p>3. Fair-Use AI Quota: To prevent server strain and misuse, the PRO subscription includes a generous fair-use quota of 10 AI meal scans and 10 AI voice queries per day. The quota resets daily at 00:00 local time. Unused daily credits lapse and cannot be accumulated or redeemed for cash.</p>
+<p>4. Automatic Renewal: Subscriptions automatically renew for the chosen period (e.g., 1 month or 1 year) unless cancelled at least 24 hours prior to the conclusion of the active billing cycle.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 7 Statutory Right of Withdrawal & Model Withdrawal Form</h2>
+          <div><ul><li>INSTRUCTIONS ON WITHDRAWAL ---</li></ul>
+<p>Right of Withdrawal:<br>As a consumer, you have the statutory right to withdraw from this contract within 14 days without giving any reason.</p>
+<p>Withdrawal for In-App Purchases (Apple & Google):<br>Because in-app purchases and subscriptions are contracted directly with Apple Inc. or Google LLC, statutory cancellation and refund claims must be asserted through the respective store's dispute channels:</p><ul><li><strong>Apple App Store:</strong> Visit https://reportaproblem.apple.com, sign in with your Apple ID, and request a refund.</li><li><strong>Google Play Store:</strong> Visit https://play.google.com or contact Google Play support within statutory deadlines.</li></ul>
+<p>Premature Expiration of the Right of Withdrawal for Digital Content (§ 356 (5) BGB):<br>The right of withdrawal expires for digital content not supplied on a tangible medium if the entrepreneur began performance of the contract after the consumer expressly agreed that performance begins before the expiry of the withdrawal period, and acknowledged that by giving consent they lose their right of withdrawal.</p>
+<p>(If you wish to withdraw from the contract, please fill out this form and return it):</p><ul><li>STATUTORY MODEL WITHDRAWAL FORM ---</li></ul>
+<p>To: Ajolo Fitness GmbH, Musterstraße 123, 12345 Musterstadt, Deutschland, Email: support@ajolo.app</p>
+<p>I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract of sale of the following goods (*)/for the provision of the following service (*):<br>(*) Delete as appropriate.</p><ul><li><strong>Ordered on (*)/received on (*):</strong> </li><li><strong>Name of consumer(s):</strong> </li><li><strong>Address of consumer(s):</strong> </li><li><strong>Signature of consumer(s) (only if paper notification):</strong> </li><li><strong>Date:</strong> </li></ul></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 8 Subscription Cancellation (§ 312k BGB)</h2>
+          <div><p>1. Cancellation at Any Time: You may cancel your active Ajolo PRO subscription at any time effective at the end of the current billing cycle. Following cancellation, all PRO capabilities remain completely accessible until the conclusion of the already paid term.</p>
+<p>2. Cancellation Method pursuant to § 312k BGB & Store Guidelines:<br>As subscription contracts are administered by Apple or Google, cancellations are executed via your smartphone account settings:</p><ul><li><strong>Apple iOS:</strong> Settings -> [Your Name/Apple ID] -> Subscriptions -> Ajolo -> Cancel Subscription (or directly via {{APPLE_SUBSCRIPTIONS_URL}})</li><li><strong>Google Android:</strong> Google Play Store -> Profile icon top right -> Payments & subscriptions -> Subscriptions -> Ajolo -> Cancel subscription (or directly via {{GOOGLE_PLAY_SUBSCRIPTIONS_URL}})</li></ul>
+<p>3. In-App Cancellation Link: Within Ajolo Settings under 'Resources & Legal', we provide a direct 1-click cancellation button redirecting you immediately to your store's native subscription management screen.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 9 Legally Enforceable Limitation of Liability (§ 309 No. 7 BGB & GmbHG)</h2>
+          <div><p>1. Unlimited Liability: The Provider is liable without limitation under statutory law:<br>a) for damages arising from injury to life, limb, or health resulting from an intentional or negligent breach of duty by the Provider, its legal representatives, or vicarious agents;<br>b) for damages resulting from an intentional or grossly negligent breach of duty by the Provider, its legal representatives, or vicarious agents;<br>c) in cases of fraudulent concealment of defects, assumption of a specific guarantee, or claims under the German Product Liability Act (ProdHaftG).</p>
+<p>2. Limited Liability for Cardinal Duties: In cases of slight negligence resulting in a breach of an essential contractual duty (cardinal duty whose fulfillment is essential to the proper execution of the contract and upon whose observance the user routinely relies), the Provider's liability is strictly limited in amount to the typical, foreseeable damage at the time of contract formation. This liability cap is limited to the total fees paid by the user to the Provider in the respective contract year (or up to 50.00 EUR in cases of gratuitous use).</p>
+<p>3. Exclusion in Other Cases: Any further liability of the Provider for slight negligence is strictly excluded.</p>
+<p>4. Liability for Data Loss: In case of data loss, the Provider is liable solely for the expenditure required to restore data if proper, regular backups had been conducted by the user (via device backup or cloud synchronization).</p>
+<p>5. Corporate Liability Shield: The Provider operates as a limited liability company (GmbH). Corporate liability is restricted to company assets pursuant to § 13 (2) GmbHG.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 10 Copyright & Prohibition of Reverse Engineering</h2>
+          <div><p>1. Intellectual Property: All content, designs, logos, graphics, database architectures, algorithms, and source code of Ajolo are protected by copyright and intellectual property laws. The user is granted a simple, non-exclusive, non-transferable, and non-sublicensable right to private use according to intended purpose.</p>
+<p>2. Prohibited Conduct: The user is strictly prohibited from decompiling, disassembling, reverse-engineering, creating derivative works, scraping, or engaging in unauthorized API interactions against Ajolo.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>§ 11 Dispute Resolution & Governing Law</h2>
+          <div><p>1. Governing Law: The laws of the Federal Republic of Germany apply, excluding the UN Convention on Contracts for the International Sale of Goods (CISG). For consumers habitually resident in another EU Member State, mandatory consumer protection provisions of that state remain unaffected.</p>
+<p>2. Consumer Arbitration (§ 36 VSBG): The Provider is neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+<p>3. Online Dispute Resolution (Art. 14 (1) ODR Regulation): The European Commission provides an online dispute resolution platform: https://ec.europa.eu/consumers/odr. Our contact email is: support@ajolo.app.</p>
+<p>4. Severability Clause (§ 306 BGB): Should any provision of these Terms be or become invalid or unenforceable, the validity of the remaining provisions shall remain unaffected.</p></div>
+        </article>
+        
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Ajolo App. Alle Rechte vorbehalten. • <a href="privacy.html">Datenschutz</a> • <a href="imprint.html">Impressum</a> • <a href="terms.html">AGB</a> • Support: <a href="mailto:support@ajolo.app">support@ajolo.app</a></p>
+  </footer>
+</body>
+</html>
