@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum • Ajolo</title>
+  <meta name="description" content="Offizielle Datenschutzerklärung, Impressum und rechtliche Dokumente für die mobile App Ajolo (iOS & Android).">
+  <meta name="robots" content="index, follow">
+  <style>
+:root {
+  --bg: #000000;
+  --bg-subtle: #0a0c13;
+  --surface: #11141e;
+  --surface-hover: #161a27;
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --surface-border-active: rgba(45, 212, 191, 0.35);
+  --text-main: #f8f6f0;
+  --text-muted: #8c8a82;
+  --text-dim: #555555;
+  --accent: #2dd4bf;
+  --accent-hover: #14b8a6;
+  --accent-glow: rgba(45, 212, 191, 0.2);
+  --purple: #a855f7;
+  --purple-glow: rgba(168, 85, 247, 0.18);
+  --coral-glow: rgba(246, 102, 95, 0.25);
+  --tag-bg: rgba(255, 255, 255, 0.04);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Ambient Background Glow */
+.ambient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.glow-cyan {
+  position: absolute;
+  top: -150px;
+  left: 15%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+.glow-purple {
+  position: absolute;
+  top: 350px;
+  right: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--purple-glow) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(90px);
+  opacity: 0.5;
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 12, 19, 0.8);
+  border-bottom: 1px solid var(--surface-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.header-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.brand-logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px var(--coral-glow));
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.legal-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  border: 1px solid var(--surface-border);
+  margin-left: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+  color: var(--text-main);
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+}
+
+.btn-store {
+  background: rgba(45, 212, 191, 0.1) !important;
+  border: 1px solid var(--surface-border-active) !important;
+  color: var(--accent) !important;
+  font-weight: 600 !important;
+}
+
+.btn-store:hover {
+  background: var(--accent) !important;
+  color: #000000 !important;
+  border-color: var(--accent) !important;
+}
+
+.lang-switch {
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #000000;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.hero {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.meta-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--tag-bg);
+  border: 1px solid var(--surface-border);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.section-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 32px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.section-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.section-card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-card p {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.section-card p:last-child {
+  margin-bottom: 0;
+}
+
+.section-card ul {
+  margin: 12px 0 16px 20px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.section-card li {
+  margin-bottom: 8px;
+}
+
+.section-card strong {
+  color: var(--text-main);
+}
+
+footer {
+  border-top: 1px solid var(--surface-border);
+  background: rgba(10, 12, 19, 0.85);
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+</style>
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-de').forEach(el => el.style.display = lang === 'de' ? 'block' : 'none');
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+      document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+      localStorage.setItem('ajolo_legal_lang', lang);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('ajolo_legal_lang') || (navigator.language.startsWith('de') ? 'de' : 'en');
+      setLang(saved);
+    });
+  </script>
+  <link rel="icon" type="image/png" href="assets/ajolo_app_icon.png">
+  <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <!-- Ambient Glow Effects -->
+  <div class="ambient-bg">
+    <div class="glow-cyan"></div>
+    <div class="glow-purple"></div>
+  </div>
+
+  <div class="page-wrapper">
+    <header>
+      <div class="header-container">
+        <a href="index.html" class="brand">
+          <img src="assets/ajolo_logo.svg" alt="Ajolo Logo" class="brand-logo-img">
+          <span class="brand-title">AJOLO</span>
+          <span class="legal-badge">Legal</span>
+        </a>
+        <nav>
+          <a href="privacy.html" class="">Datenschutz</a>
+          <a href="terms.html" class="">AGB</a>
+          <a href="imprint.html" class="active">Impressum</a>
+          <a href="https://store.ajolo.de/" class="btn-store" target="_blank" rel="noopener">App laden ↗</a>
+        </nav>
+        <div class="lang-switch">
+          <button id="btn-de" class="lang-btn active" onclick="setLang('de')">DE</button>
+          <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+        </div>
+      </div>
+    </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1 class="lang-de">Impressum</h1>
+      <h1 class="lang-en" style="display:none;">Imprint / Legal Notice</h1>
+      <p class="lang-de">§ 5 DDG Anbieterkennzeichnung</p>
+      <p class="lang-en" style="display:none;">Provider Identification (§ 5 DDG)</p>
+      
+      <div class="meta-badges">
+        <span class="badge highlight">✓ 100% DSGVO & GDPR Konform</span>
+        <span class="badge">🔒 Privacy by Design (Lokale Sandbox)</span>
+        <span class="badge">🍎 Apple Health & HealthKit Safe</span>
+        <span class="badge">🤖 Google Health Connect Validated</span>
+        <span class="badge">Stand: September 2026</span>
+      </div>
+    </div>
+
+    <div class="lang-de">
+      
+        <article class="section-card">
+          <h2>1. Angaben gemäß § 5 DDG</h2>
+          <div><p>Diensteanbieter dieser mobilen Applikation:</p>
+<p>Sebastian Kehrls<br>Einzelunternehmer, Geschäftsbezeichnung „Ajolo“<br>Yorckstraße 22<br>93049 Regensburg<br>Deutschland</p>
+<p>E-Mail: app@ajolo.de<br>Telefon: +49 179 4324782</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>2. Elektronische Kontaktaufnahme</h2>
+          <div><p>E-Mail: app@ajolo.de<br>Telefon: +49 179 4324782</p>
+<p>Support- und Datenschutzanfragen erfolgen direkt über die angegebene E-Mail-Adresse.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>3. Verbraucherstreitbeilegung (§ 36 VSBG)</h2>
+          <div><p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+<p>Hinweis gemäß § 36 VSBG:<br>Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>4. Haftung für Inhalte & externe Links</h2>
+          <div><p>Als Diensteanbieter sind wir gemäß den allgemeinen Gesetzen für eigene Inhalte auf diesen Seiten verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+<p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>5. Urheberrecht & Open Source</h2>
+          <div><p>Die durch die Seitenbetreiber erstellten Inhalte, Quellcodes, Grafiken und Designs in der Ajolo App unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung.</p>
+<p>Verwendete Open-Source-Bibliotheken und Datensätze (z. B. Free-Exercise-DB, Open Food Facts) sind unter 'Open-Source-Lizenzen' in den App-Einstellungen vollständig deklariert.</p></div>
+        </article>
+        
+    </div>
+
+    <div class="lang-en" style="display:none;">
+      
+        <article class="section-card">
+          <h2>1. Information according to § 5 DDG</h2>
+          <div><p>Service provider of this mobile application:</p>
+<p>Sebastian Kehrls<br>Sole trader, trading as “Ajolo”<br>Yorckstraße 22<br>93049 Regensburg<br>Deutschland</p>
+<p>Email: app@ajolo.de<br>Phone: +49 179 4324782</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>2. Contact</h2>
+          <div><p>Email: app@ajolo.de<br>Phone: +49 179 4324782</p>
+<p>Support and data privacy enquiries are handled directly via email.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>3. Consumer Dispute Resolution (§ 36 VSBG)</h2>
+          <div><p>The European Commission provides a platform for online dispute resolution (ODR):<br><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+<p>Notice under § 36 VSBG:<br>We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board (§ 36 VSBG).</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>4. Liability for Content & Links</h2>
+          <div><p>As a service provider, we are responsible for our own content according to general statutory laws. However, we are not obligated to monitor transmitted or stored third-party information or investigate circumstances that indicate unlawful activity.</p>
+<p>Our app may contain links to external third-party websites over whose content we have no influence. The respective provider or operator is always responsible for external content.</p></div>
+        </article>
+        
+        <article class="section-card">
+          <h2>5. Copyright & Open Source Attribution</h2>
+          <div><p>The content, source code, graphics, and designs in the Ajolo app created by the app operator are subject to copyright law. Any duplication, processing, or distribution requires prior written consent.</p>
+<p>Open-source libraries and datasets utilized (such as Free-Exercise-DB, Open Food Facts) are fully attributed under 'Open Source Licenses' in the app settings.</p></div>
+        </article>
+        
+    </div>
+  </main>
+
+      <footer>
+      <p>© 2026 Ajolo App. Alle Rechte vorbehalten. • <a href="privacy.html">Datenschutz</a> • <a href="imprint.html">Impressum</a> • <a href="terms.html">AGB</a> • <a href="https://store.ajolo.de/">App Download</a> • Support: <a href="mailto:app@ajolo.de">app@ajolo.de</a></p>
+    </footer>
+  </div>
+</body>
+</html>
