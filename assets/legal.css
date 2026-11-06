@@ -186,21 +186,35 @@ footer a:hover{color:var(--text)}
   #cg{display:none}
 }
 
-/* Druck / PDF: hell, ohne Effekte */
+/* Druck / PDF: hell, A4, ohne Effekte */
+@page{size:A4;margin:14mm}
 @media print{
   :root{--bg:#fff;--text:#111;--soft:#222;--muted:#444;--dim:#555;--line:#ccc;--line2:#bbb;--gold:#7a5c14;--mint:#0b6b60}
-  body{background:#fff;color:#111}
-  header,footer,.toc,.toc-m,#bar,#cg,.glow,.wm,.chips,.more,.skip{display:none!important}
-  .hero{padding:10px 0 14px;border:0;text-align:left}
-  .hero::before{display:none}
+  html{scroll-padding-top:0}
+  body{background:#fff;color:#111;font-size:10pt;line-height:1.5}
+  header,footer,.toc,.toc-m,#bar,#cg,.glow,.wm,.chips,.more,.skip,.hero::before{display:none!important}
+  .wrap{max-width:none;padding-inline:0}
+  .hero{padding:0 0 8px;border:0;text-align:left}
   .hero .in-w{align-items:flex-start}
-  h1{font-size:28px;margin:6px 0 6px}
+  h1{font-size:24pt;margin:4px 0 6px;max-width:none}
+  .lead{font-size:10.5pt;margin:0;max-width:none}
   .grad{background:none;color:#111;-webkit-text-fill-color:#111;animation:none}
-  .doc-wrap{display:block;padding:0}
+  .eyebrow{font-size:8pt}
+  .doc-wrap{display:block;padding-block:6px 0}
   .doc{max-width:none}
-  .sec,.gl,.note-box,.addr{background:#fff!important;border:1px solid #ccc;break-inside:avoid-page;box-shadow:none}
-  .sec{padding:14px 16px;margin-bottom:10px}
-  .sec li::before{background:#444}
+  .doc>*+*{margin-top:8px}
+  .glance{gap:8px}
+  .gl,.note-box,.addr,.sec{background:#fff!important;border:1px solid #ccc;box-shadow:none;border-radius:8px}
+  .gl{padding:8px 10px;break-inside:avoid}.gl h3{font-size:10.5pt}.gl p{font-size:9pt}.gl .ic{display:none}
+  .sec{padding:10px 14px;margin:0;break-inside:auto}
+  .sec h2{font-size:13pt;margin-bottom:6px;break-after:avoid-page}
+  .sec h3{break-after:avoid-page}
+  .sec p,.sec li,.kv dd{font-size:10pt;margin:5px 0}
+  .sec li{padding:2px 0 2px 16px}
+  .sec li::before{background:#444;width:5px;height:5px;top:.7em}
+  .cl,.tbl-w,.addr,.form{break-inside:avoid-page}
+  .tbl{min-width:0;font-size:9.5pt}
   .sec a{color:#0b4d94;border:0}
   .js .rv{opacity:1!important;transform:none!important}
+  .sp::before{display:none}
 }
