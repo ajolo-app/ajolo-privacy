@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://legal.ajolo.de/sitemap.xml

@@ -1,457 +1,107 @@
-<!DOCTYPE html>
-<html lang="de">
+<!doctype html>
+<html lang="de" data-lang="de" data-title-de="Impressum • Ajolo Legal" data-title-en="Imprint • Ajolo Legal" data-desc-de="Impressum und Anbieterkennzeichnung nach § 5 DDG der Ajolo GmbH i.Gr., Yorckstraße 22, 93049 Regensburg." data-desc-en="Imprint and provider identification under § 5 DDG of Ajolo GmbH i.Gr., Yorckstraße 22, 93049 Regensburg, Germany.">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum • Ajolo</title>
-  <meta name="description" content="Offizielle Datenschutzerklärung, Impressum und rechtliche Dokumente für die mobile App Ajolo (iOS & Android).">
-  <meta name="robots" content="index, follow">
-  <style>
-:root {
-  --bg: #000000;
-  --bg-subtle: #0a0c13;
-  --surface: #11141e;
-  --surface-hover: #161a27;
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --surface-border-active: rgba(45, 212, 191, 0.35);
-  --text-main: #f8f6f0;
-  --text-muted: #8c8a82;
-  --text-dim: #555555;
-  --accent: #2dd4bf;
-  --accent-hover: #14b8a6;
-  --accent-glow: rgba(45, 212, 191, 0.2);
-  --purple: #a855f7;
-  --purple-glow: rgba(168, 85, 247, 0.18);
-  --coral-glow: rgba(246, 102, 95, 0.25);
-  --tag-bg: rgba(255, 255, 255, 0.04);
-  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  background-color: var(--bg);
-  color: var(--text-main);
-  font-family: var(--font-sans);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  padding: 0;
-  margin: 0;
-  min-height: 100vh;
-  position: relative;
-}
-
-/* Ambient Background Glow */
-.ambient-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.glow-cyan {
-  position: absolute;
-  top: -150px;
-  left: 15%;
-  width: 550px;
-  height: 550px;
-  background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0,0,0,0) 70%);
-  filter: blur(80px);
-  opacity: 0.6;
-}
-
-.glow-purple {
-  position: absolute;
-  top: 350px;
-  right: 10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, var(--purple-glow) 0%, rgba(0,0,0,0) 70%);
-  filter: blur(90px);
-  opacity: 0.5;
-}
-
-.page-wrapper {
-  position: relative;
-  z-index: 1;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(10, 12, 19, 0.8);
-  border-bottom: 1px solid var(--surface-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-.header-container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: var(--text-main);
-}
-
-.brand-logo-img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 8px var(--coral-glow));
-}
-
-.brand-title {
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.legal-badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-muted);
-  border: 1px solid var(--surface-border);
-  margin-left: 2px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 7px 14px;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-}
-
-nav a:hover, nav a.active {
-  color: var(--text-main);
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-}
-
-.btn-store {
-  background: rgba(45, 212, 191, 0.1) !important;
-  border: 1px solid var(--surface-border-active) !important;
-  color: var(--accent) !important;
-  font-weight: 600 !important;
-}
-
-.btn-store:hover {
-  background: var(--accent) !important;
-  color: #000000 !important;
-  border-color: var(--accent) !important;
-}
-
-.lang-switch {
-  display: inline-flex;
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  border-radius: 20px;
-  padding: 2px;
-}
-
-.lang-btn {
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 5px 12px;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.lang-btn.active {
-  background: var(--accent);
-  color: #000000;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 24px 80px;
-}
-
-.hero {
-  margin-bottom: 40px;
-  text-align: left;
-}
-
-.hero h1 {
-  font-size: 2.25rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
-  background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
-.meta-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--tag-bg);
-  border: 1px solid var(--surface-border);
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-muted);
-}
-
-.section-card {
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  border-radius: 20px;
-  padding: 32px 28px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-  transition: border-color 0.25s ease, transform 0.25s ease;
-}
-
-.section-card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
-}
-
-.section-card h2 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-  color: var(--text-main);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.section-card p {
-  margin-bottom: 12px;
-  color: var(--text-muted);
-  font-size: 0.98rem;
-  line-height: 1.65;
-}
-
-.section-card p:last-child {
-  margin-bottom: 0;
-}
-
-.section-card ul {
-  margin: 12px 0 16px 20px;
-  color: var(--text-muted);
-  font-size: 0.98rem;
-  line-height: 1.65;
-}
-
-.section-card li {
-  margin-bottom: 8px;
-}
-
-.section-card strong {
-  color: var(--text-main);
-}
-
-footer {
-  border-top: 1px solid var(--surface-border);
-  background: rgba(10, 12, 19, 0.85);
-  padding: 32px 24px;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
-footer a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-</style>
-  <script>
-    function setLang(lang) {
-      document.querySelectorAll('.lang-de').forEach(el => el.style.display = lang === 'de' ? 'block' : 'none');
-      document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-      document.getElementById('btn-de').classList.toggle('active', lang === 'de');
-      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.documentElement.lang = lang;
-      localStorage.setItem('ajolo_legal_lang', lang);
-    }
-    window.addEventListener('DOMContentLoaded', () => {
-      const saved = localStorage.getItem('ajolo_legal_lang') || (navigator.language.startsWith('de') ? 'de' : 'en');
-      setLang(saved);
-    });
-  </script>
-  <link rel="icon" type="image/png" href="assets/ajolo_app_icon.png">
-  <meta name="theme-color" content="#000000">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum • Ajolo Legal</title>
+<meta name="description" content="Impressum und Anbieterkennzeichnung nach § 5 DDG der Ajolo GmbH i.Gr., Yorckstraße 22, 93049 Regensburg.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#050709">
+<link rel="canonical" href="https://legal.ajolo.de/imprint.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ajolo Legal">
+<meta property="og:title" content="Impressum • Ajolo Legal">
+<meta property="og:description" content="Impressum und Anbieterkennzeichnung nach § 5 DDG der Ajolo GmbH i.Gr., Yorckstraße 22, 93049 Regensburg.">
+<meta property="og:url" content="https://legal.ajolo.de/imprint.html">
+<meta property="og:image" content="https://legal.ajolo.de/assets/ajolo_app_icon.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="assets/ajolo_app_icon.png">
+<link rel="stylesheet" href="assets/legal.css?v=20261106">
+<script>document.documentElement.classList.add('js')</script>
+<noscript><style>.view[hidden]{display:block!important}.js .rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-    <!-- Ambient Glow Effects -->
-  <div class="ambient-bg">
-    <div class="glow-cyan"></div>
-    <div class="glow-purple"></div>
-  </div>
-
-  <div class="page-wrapper">
-    <header>
-      <div class="header-container">
-        <a href="index.html" class="brand">
-          <img src="assets/ajolo_logo.svg" alt="Ajolo Logo" class="brand-logo-img">
-          <span class="brand-title">AJOLO</span>
-          <span class="legal-badge">Legal</span>
-        </a>
-        <nav>
-          <a href="privacy.html" class="">Datenschutz</a>
-          <a href="terms.html" class="">AGB</a>
-          <a href="imprint.html" class="active">Impressum</a>
-          <a href="https://store.ajolo.de/" class="btn-store" target="_blank" rel="noopener">App laden ↗</a>
-        </nav>
-        <div class="lang-switch">
-          <button id="btn-de" class="lang-btn active" onclick="setLang('de')">DE</button>
-          <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
-        </div>
-      </div>
-    </header>
-
-  <main class="container">
-    <div class="hero">
-      <h1 class="lang-de">Impressum</h1>
-      <h1 class="lang-en" style="display:none;">Imprint / Legal Notice</h1>
-      <p class="lang-de">§ 5 DDG Anbieterkennzeichnung</p>
-      <p class="lang-en" style="display:none;">Provider Identification (§ 5 DDG)</p>
-      
-      <div class="meta-badges">
-        <span class="badge highlight">✓ 100% DSGVO & GDPR Konform</span>
-        <span class="badge">🔒 Privacy by Design (Lokale Sandbox)</span>
-        <span class="badge">🍎 Apple Health & HealthKit Safe</span>
-        <span class="badge">🤖 Google Health Connect Validated</span>
-        <span class="badge">Stand: 06.11.2026</span>
-      </div>
-    </div>
-
-    <div class="lang-de">
-      
-        <article class="section-card">
-          <h2>1. Angaben gemäß § 5 DDG</h2>
-          <div><p>Diensteanbieter dieser mobilen Applikation:</p>
-<p>Ajolo GmbH i.Gr.<br>Yorckstraße 22<br>93049 Regensburg<br>Deutschland</p>
-<p>Vertreten durch die Geschäftsführer: Sebastian Kehrls, Markus Kehrls<br>Handelsregister: Amtsgericht Regensburg, Eintragung beantragt</p>
-<p>E-Mail: app@ajolo.de<br>Telefon: +49 179 4324782</p></div>
-        </article>
-        
-        <article class="section-card">
-          <h2>2. Elektronische Kontaktaufnahme</h2>
-          <div><p>E-Mail: app@ajolo.de<br>Telefon: +49 179 4324782</p>
-<p>Support- und Datenschutzanfragen erfolgen direkt über die angegebene E-Mail-Adresse.</p></div>
-        </article>
-        
-        <article class="section-card">
-          <h2>3. Verbraucherstreitbeilegung (§ 36 VSBG)</h2>
-          <div><p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
-<p>Hinweis gemäß § 36 VSBG:<br>Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).</p></div>
-        </article>
-        
-        <article class="section-card">
-          <h2>4. Haftung für Inhalte & externe Links</h2>
-          <div><p>Als Diensteanbieter sind wir gemäß den allgemeinen Gesetzen für eigene Inhalte auf diesen Seiten verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-<p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</p></div>
-        </article>
-        
-        <article class="section-card">
-          <h2>5. Urheberrecht & Open Source</h2>
-          <div><p>Die durch die Seitenbetreiber erstellten Inhalte, Quellcodes, Grafiken und Designs in der Ajolo App unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung.</p>
-<p>Verwendete Open-Source-Bibliotheken und Datensätze (z. B. Free-Exercise-DB, Open Food Facts) sind unter 'Open-Source-Lizenzen' in den App-Einstellungen vollständig deklariert.</p></div>
-        </article>
-        
-    </div>
-
-    <div class="lang-en" style="display:none;">
-      
-        <article class="section-card">
-          <h2>1. Information according to § 5 DDG</h2>
-          <div><p>Service provider of this mobile application:</p>
-<p>Ajolo GmbH i.Gr.<br>Yorckstraße 22<br>93049 Regensburg<br>Deutschland</p>
-<p>Represented by the Managing Directors: Sebastian Kehrls, Markus Kehrls<br>Commercial register: Amtsgericht Regensburg, registration pending</p>
-<p>Email: app@ajolo.de<br>Phone: +49 179 4324782</p></div>
-        </article>
-        
-        <article class="section-card">
-          <h2>2. Contact</h2>
-          <div><p>Email: app@ajolo.de<br>Phone: +49 179 4324782</p>
-<p>Support and data privacy enquiries are handled directly via email.</p></div>
-        </article>
-        
-        <article class="section-card">
-          <h2>3. Consumer Dispute Resolution (§ 36 VSBG)</h2>
-          <div><p>The European Commission provides a platform for online dispute resolution (ODR):<br><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
-<p>Notice under § 36 VSBG:<br>We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board (§ 36 VSBG).</p></div>
-        </article>
-        
-        <article class="section-card">
-          <h2>4. Liability for Content & Links</h2>
-          <div><p>As a service provider, we are responsible for our own content according to general statutory laws. However, we are not obligated to monitor transmitted or stored third-party information or investigate circumstances that indicate unlawful activity.</p>
-<p>Our app may contain links to external third-party websites over whose content we have no influence. The respective provider or operator is always responsible for external content.</p></div>
-        </article>
-        
-        <article class="section-card">
-          <h2>5. Copyright & Open Source Attribution</h2>
-          <div><p>The content, source code, graphics, and designs in the Ajolo app created by the app operator are subject to copyright law. Any duplication, processing, or distribution requires prior written consent.</p>
-<p>Open-source libraries and datasets utilized (such as Free-Exercise-DB, Open Food Facts) are fully attributed under 'Open Source Licenses' in the app settings.</p></div>
-        </article>
-        
-    </div>
-  </main>
-
-      <footer>
-      <p>© 2026 Ajolo App. Alle Rechte vorbehalten. • <a href="privacy.html">Datenschutz</a> • <a href="imprint.html">Impressum</a> • <a href="terms.html">AGB</a> • <a href="https://store.ajolo.de/">App Download</a> • Support: <a href="mailto:app@ajolo.de">app@ajolo.de</a></p>
-    </footer>
-  </div>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<div id="bar"></div><div id="cg"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h5M9.5 16h5"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.4 6-5.4s6 2.1 6 5.4"/><path d="M16 5.2a3.2 3.2 0 010 5.6M17.5 14.8c2.1.6 3.5 2.3 3.5 5.2"/></symbol>
+<symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-2v18M12 9h8v12M3 21h18M8 8h1M8 12h1M8 16h1M15 13h2M15 17h2"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+<symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6M7 17H5a2 2 0 01-2-2v-4a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2h-2M7 14h10v7H7z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.7 1.8L21.5 18.5l-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+<symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3.5 3.5 0 006 0zM19 7l-3 7a3.5 3.5 0 006 0z"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></symbol>
+</defs></svg>
+<header><div class="wrap nav">
+<a class="brand" href="index.html" aria-label="Ajolo Legal"><img src="assets/ajolo_app_icon.png" alt="" width="30" height="30"><span>AJOLO</span><span class="tag">LEGAL</span></a>
+<nav class="links" aria-label="Rechtliches"><a href="privacy.html"><span data-de="Datenschutz" data-en="Privacy">Datenschutz</span></a><a href="terms.html"><span data-de="AGB" data-en="Terms">AGB</span></a><a href="partner-datenschutz.html"><span data-de="Partnerprogramm" data-en="Partner program">Partnerprogramm</span></a><a href="imprint.html" aria-current="page"><span data-de="Impressum" data-en="Imprint">Impressum</span></a></nav>
+<div class="nav-r"><div class="lang" role="group" aria-label="Sprache / Language"><button type="button" data-l="de" aria-pressed="true">DE</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+<a class="btn btn-primary btn-sm" href="https://store.ajolo.de/" rel="noopener"><span data-de="App laden" data-en="Get the app">App laden</span></a></div>
+</div></header>
+<main id="main">
+<div class="view" lang="de"><section class="hero"><div class="glow g1"></div><div class="glow g2"></div><div class="wm" aria-hidden="true">LEGAL</div><div class="wrap in-w"><span class="eyebrow">AJOLO LEGAL · IMPRESSUM</span><h1><span class="grad">Impressum</span></h1><p class="lead">Wer hinter Ajolo steht und wie du uns erreichst. <b>Anbieterkennzeichnung nach § 5 DDG.</b></p><div class="chips"><span class="chip">Stand: 06.11.2026</span><span class="chip"><a href="mailto:app@ajolo.de">app@ajolo.de</a></span><button class="chip" type="button" data-print><svg class="i"><use href="#i-print"/></svg><span>Drucken / PDF</span></button></div></div></section><div class="wrap doc-wrap"><aside class="toc"><nav aria-label="Inhalt"><span class="toc-t">Inhalt</span><ol><li><a href="#de-anbieter">Angaben gemäß § 5 DDG</a></li><li><a href="#de-kontakt">Kontakt</a></li><li><a href="#de-inhalt">Verantwortlich für den Inhalt</a></li><li><a href="#de-geltung">Wo dieses Impressum gilt</a></li><li><a href="#de-streit">Verbraucherstreitbeilegung</a></li><li><a href="#de-haftung">Haftung für Inhalte und Links</a></li><li><a href="#de-urheber">Urheberrecht und Open Source</a></li></ol></nav></aside><div class="doc"><details class="toc-m"><summary>Inhalt</summary><ol><li><a href="#de-anbieter">Angaben gemäß § 5 DDG</a></li><li><a href="#de-kontakt">Kontakt</a></li><li><a href="#de-inhalt">Verantwortlich für den Inhalt</a></li><li><a href="#de-geltung">Wo dieses Impressum gilt</a></li><li><a href="#de-streit">Verbraucherstreitbeilegung</a></li><li><a href="#de-haftung">Haftung für Inhalte und Links</a></li><li><a href="#de-urheber">Urheberrecht und Open Source</a></li></ol></details><section class="sec sp rv" id="de-anbieter"><h2><span class="n">01</span><span>Angaben gemäß § 5 DDG</span></h2>
+<div class="addr"><b>Ajolo GmbH i.Gr.</b><br>Yorckstraße 22<br>93049 Regensburg<br>Deutschland</div>
+<dl class="kv">
+<dt>Vertretungsberechtigt</dt><dd>die Geschäftsführer Sebastian Kehrls und Markus Kehrls</dd>
+<dt>Rechtsform</dt><dd>Gesellschaft mit beschränkter Haftung in Gründung (Vor-GmbH). Die Eintragung in das Handelsregister des Amtsgerichts Regensburg ist beantragt. Die Registernummer wird nach der Eintragung ergänzt.</dd>
+<dt>Umsatzsteuer-ID</dt><dd>wird nach Erteilung ergänzt</dd>
+</dl></section><section class="sec sp rv" id="de-kontakt"><h2><span class="n">02</span><span>Kontakt</span></h2>
+<dl class="kv">
+<dt>E-Mail</dt><dd><a href="mailto:app@ajolo.de">app@ajolo.de</a></dd>
+<dt>Telefon</dt><dd><a href="tel:+491794324782">+49 179 4324782</a></dd>
+</dl>
+<p>Anfragen zum Datenschutz, zu Verträgen und zum Support richtest du bitte an die E-Mail-Adresse.</p></section><section class="sec sp rv" id="de-inhalt"><h2><span class="n">03</span><span>Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)</span></h2>
+<p>Sebastian Kehrls, Yorckstraße 22, 93049 Regensburg</p></section><section class="sec sp rv" id="de-geltung"><h2><span class="n">04</span><span>Wo dieses Impressum gilt</span></h2>
+<p>Dieses Impressum gilt für die Ajolo App und für unsere Auftritte im Internet:</p>
+<ul>
+<li>Webseiten <b>legal.ajolo.de</b>, <b>partner.ajolo.de</b> und <b>store.ajolo.de</b></li>
+<li>Instagram (@ajolo.app), TikTok (@ajoloapp) und YouTube (@AjoloApp)</li>
+<li>die Community „Ajolo Creator Team“ bei Whop</li>
+</ul></section><section class="sec sp rv" id="de-streit"><h2><span class="n">05</span><span>Verbraucherstreitbeilegung</span></h2>
+<p>Wir sind weder verpflichtet noch bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).</p></section><section class="sec sp rv" id="de-haftung"><h2><span class="n">06</span><span>Haftung für Inhalte und Links</span></h2>
+<p>Für eigene Inhalte auf diesen Seiten sind wir nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hindeuten.</p>
+<p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese Inhalte ist stets der jeweilige Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen entfernen wir solche Links umgehend.</p></section><section class="sec sp rv" id="de-urheber"><h2><span class="n">07</span><span>Urheberrecht und Open Source</span></h2>
+<p>Die von uns erstellten Inhalte, Grafiken, Designs und Quellcodes der Ajolo App und dieser Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechts bedürfen unserer schriftlichen Zustimmung.</p>
+<p>Verwendete Open-Source-Bibliotheken und Datensätze (zum Beispiel Free-Exercise-DB und Open Food Facts) sind in der App unter „Open-Source-Lizenzen“ aufgeführt.</p></section></div></div><section class="more"><div class="wrap"><h2>Weitere Rechtstexte</h2><div class="cards"><a class="card sp rv" href="privacy.html"><div class="ic"><svg class="i"><use href="#i-shield"/></svg></div><h3>Datenschutz</h3><p>Welche Daten die App nutzt, wohin sie gehen und welche Rechte du hast.</p></a><a class="card sp rv" href="terms.html"><div class="ic"><svg class="i"><use href="#i-doc"/></svg></div><h3>AGB</h3><p>Regeln für die Nutzung von Ajolo, Abos, Widerruf und Haftung.</p></a><a class="card sp rv" href="partner-datenschutz.html"><div class="ic"><svg class="i"><use href="#i-users"/></svg></div><h3>Partnerprogramm</h3><p>Datenschutz für Bewerbung, Partnerprogramm, Firmenkunden und diese Webseiten.</p></a></div></div></section></div>
+<div class="view" lang="en" hidden><section class="hero"><div class="glow g1"></div><div class="glow g2"></div><div class="wm" aria-hidden="true">LEGAL</div><div class="wrap in-w"><span class="eyebrow">AJOLO LEGAL · IMPRINT</span><h1><span class="grad">Imprint</span></h1><p class="lead">Who is behind Ajolo and how to reach us. <b>Provider identification under § 5 DDG (German Digital Services Act).</b></p><div class="chips"><span class="chip">Last updated: 6 November 2026</span><span class="chip"><a href="mailto:app@ajolo.de">app@ajolo.de</a></span><button class="chip" type="button" data-print><svg class="i"><use href="#i-print"/></svg><span>Print / PDF</span></button></div></div></section><div class="wrap doc-wrap"><aside class="toc"><nav aria-label="Contents"><span class="toc-t">Contents</span><ol><li><a href="#en-anbieter">Information pursuant to § 5 DDG</a></li><li><a href="#en-kontakt">Contact</a></li><li><a href="#en-inhalt">Responsible for content</a></li><li><a href="#en-geltung">Where this imprint applies</a></li><li><a href="#en-streit">Consumer dispute resolution</a></li><li><a href="#en-haftung">Liability for content and links</a></li><li><a href="#en-urheber">Copyright and open source</a></li></ol></nav></aside><div class="doc"><details class="toc-m"><summary>Contents</summary><ol><li><a href="#en-anbieter">Information pursuant to § 5 DDG</a></li><li><a href="#en-kontakt">Contact</a></li><li><a href="#en-inhalt">Responsible for content</a></li><li><a href="#en-geltung">Where this imprint applies</a></li><li><a href="#en-streit">Consumer dispute resolution</a></li><li><a href="#en-haftung">Liability for content and links</a></li><li><a href="#en-urheber">Copyright and open source</a></li></ol></details><section class="sec sp rv" id="en-anbieter"><h2><span class="n">01</span><span>Information pursuant to § 5 DDG</span></h2>
+<div class="addr"><b>Ajolo GmbH i.Gr.</b><br>Yorckstraße 22<br>93049 Regensburg<br>Germany</div>
+<dl class="kv">
+<dt>Represented by</dt><dd>the Managing Directors Sebastian Kehrls and Markus Kehrls</dd>
+<dt>Legal form</dt><dd>Limited liability company in formation (pre-incorporation company). Entry in the commercial register of the Local Court (Amtsgericht) Regensburg has been applied for. The registration number will be added after entry.</dd>
+<dt>VAT ID</dt><dd>to be added once issued</dd>
+</dl></section><section class="sec sp rv" id="en-kontakt"><h2><span class="n">02</span><span>Contact</span></h2>
+<dl class="kv">
+<dt>Email</dt><dd><a href="mailto:app@ajolo.de">app@ajolo.de</a></dd>
+<dt>Phone</dt><dd><a href="tel:+491794324782">+49 179 4324782</a></dd>
+</dl>
+<p>Please send enquiries about data protection, contracts and support to the email address.</p></section><section class="sec sp rv" id="en-inhalt"><h2><span class="n">03</span><span>Responsible for content (§ 18(2) MStV)</span></h2>
+<p>Sebastian Kehrls, Yorckstraße 22, 93049 Regensburg, Germany</p></section><section class="sec sp rv" id="en-geltung"><h2><span class="n">04</span><span>Where this imprint applies</span></h2>
+<p>This imprint applies to the Ajolo app and to our online presence:</p>
+<ul>
+<li>Websites <b>legal.ajolo.de</b>, <b>partner.ajolo.de</b> and <b>store.ajolo.de</b></li>
+<li>Instagram (@ajolo.app), TikTok (@ajoloapp) and YouTube (@AjoloApp)</li>
+<li>the community “Ajolo Creator Team” on Whop</li>
+</ul></section><section class="sec sp rv" id="en-streit"><h2><span class="n">05</span><span>Consumer dispute resolution</span></h2>
+<p>We are neither obliged nor willing to take part in dispute resolution proceedings before a consumer arbitration board (§ 36 VSBG).</p></section><section class="sec sp rv" id="en-haftung"><h2><span class="n">06</span><span>Liability for content and links</span></h2>
+<p>We are responsible for our own content on these pages under the general laws. We are, however, not obliged to monitor transmitted or stored third-party information or to investigate circumstances indicating unlawful activity.</p>
+<p>Our offering contains links to external third-party websites whose content we cannot influence. The respective provider is always responsible for that content. If we become aware of infringements, we remove such links without delay.</p></section><section class="sec sp rv" id="en-urheber"><h2><span class="n">07</span><span>Copyright and open source</span></h2>
+<p>The content, graphics, designs and source code of the Ajolo app and of these pages created by us are subject to German copyright law. Reproduction, editing and distribution beyond the limits of copyright law require our written consent.</p>
+<p>Open-source libraries and datasets used (for example Free-Exercise-DB and Open Food Facts) are listed in the app under “Open-source licenses”.</p></section></div></div><section class="more"><div class="wrap"><h2>More legal documents</h2><div class="cards"><a class="card sp rv" href="privacy.html"><div class="ic"><svg class="i"><use href="#i-shield"/></svg></div><h3>Privacy</h3><p>Which data the app uses, where it goes and which rights you have.</p></a><a class="card sp rv" href="terms.html"><div class="ic"><svg class="i"><use href="#i-doc"/></svg></div><h3>Terms</h3><p>Rules for using Ajolo, subscriptions, withdrawal and liability.</p></a><a class="card sp rv" href="partner-datenschutz.html"><div class="ic"><svg class="i"><use href="#i-users"/></svg></div><h3>Partner program</h3><p>Privacy for applications, the partner program, business customers and these websites.</p></a></div></div></section></div>
+</main>
+<footer><div class="wrap">
+<div class="f-grid">
+<div><div class="f-brand"><img src="assets/ajolo_app_icon.png" alt="" width="28" height="28">AJOLO</div><p><span data-de="Die App für Routinen, Training und Ernährung. Rechtliches, klar und an einem Ort." data-en="The app for routines, training and nutrition. Legal information, clear and in one place.">Die App für Routinen, Training und Ernährung. Rechtliches, klar und an einem Ort.</span></p></div>
+<div><h4><span data-de="Rechtliches" data-en="Legal">Rechtliches</span></h4><ul><li><a href="privacy.html"><span data-de="Datenschutzerklärung" data-en="Privacy policy">Datenschutzerklärung</span></a></li><li><a href="terms.html"><span data-de="AGB &amp; Nutzungsbedingungen" data-en="Terms of service">AGB &amp; Nutzungsbedingungen</span></a></li><li><a href="partner-datenschutz.html"><span data-de="Datenschutz Partnerprogramm" data-en="Partner program privacy">Datenschutz Partnerprogramm</span></a></li><li><a href="imprint.html"><span data-de="Impressum" data-en="Imprint">Impressum</span></a></li></ul></div>
+<div><h4><span data-de="Kontakt" data-en="Contact">Kontakt</span></h4><ul><li><a href="mailto:app@ajolo.de">app@ajolo.de</a></li><li><a href="https://store.ajolo.de/" rel="noopener"><span data-de="App laden" data-en="Get the app">App laden</span></a></li><li><a href="https://partner.ajolo.de/" rel="noopener">partner.ajolo.de</a></li></ul></div>
+</div>
+<div class="f-bot"><span>&copy; 2026 Ajolo GmbH i.Gr. &middot; Yorckstra&szlig;e 22 &middot; 93049 Regensburg</span><span><span data-de="Stand: 06.11.2026" data-en="Last updated: 6 November 2026">Stand: 06.11.2026</span></span></div>
+</div></footer>
+<script src="assets/legal.js?v=20261106" defer></script>
 </body>
 </html>
