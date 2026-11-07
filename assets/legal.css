@@ -229,3 +229,4 @@ footer a:hover{color:var(--text)}
   .js .rv{opacity:1!important;transform:none!important}
   .sp::before{display:none}
 }
+.sec a,.sec p,.sec li,.sec dd{overflow-wrap:anywhere}
